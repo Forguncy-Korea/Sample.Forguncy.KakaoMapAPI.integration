@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CustomLibraries>
+  <UserJSFileList>
+    <Item class="Forguncy.Model.UserJSOrCssFile" assembly="ServerDesignerCommon">
+      <IsLink>True</IsLink>
+      <Name>https://dapi.kakao.com/v2/maps/sdk.js?appkey=복사한자신의앱키&amp;libraries=services,clusterer,drawing</Name>
+    </Item>
+    <Item class="Forguncy.Model.UserJSOrCssFile" assembly="ServerDesignerCommon">
+      <IsLink>True</IsLink>
+      <Name>https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js</Name>
+    </Item>
+  </UserJSFileList>
+</CustomLibraries>

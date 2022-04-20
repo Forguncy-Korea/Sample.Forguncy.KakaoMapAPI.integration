@@ -1,0 +1,192 @@
+{
+  "Rows": {
+    "RowColumnAttachedInfos": {
+      "1": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 500.0,
+          "Mode": 2,
+          "MinLength": {
+            "Unit": 1
+          },
+          "MaxLength": {
+            "Value": 1.0
+          }
+        }
+      },
+      "2": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 10.0
+        }
+      },
+      "3": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 40.0
+        }
+      },
+      "4": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 10.0
+        }
+      },
+      "5": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 40.0
+        }
+      },
+      "6": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 10.0
+        }
+      },
+      "7": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 40.0
+        }
+      },
+      "8": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 10.0
+        }
+      }
+    },
+    "InLogicalVisibleIndexes": [
+      9,
+      10,
+      11
+    ],
+    "Count": 12
+  },
+  "Cols": {
+    "RowColumnAttachedInfos": {
+      "0": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0,
+          "Mode": 2,
+          "MinLength": {
+            "Unit": 1
+          },
+          "MaxLength": {
+            "Value": 1.0
+          }
+        }
+      },
+      "1": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 400.0
+        }
+      },
+      "2": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0,
+          "Mode": 2,
+          "MinLength": {
+            "Unit": 1
+          },
+          "MaxLength": {
+            "Value": 1.0
+          }
+        }
+      }
+    },
+    "InLogicalVisibleIndexes": [
+      3,
+      4,
+      5
+    ],
+    "Count": 6
+  },
+  "Values": {
+    "3,1": "그레이프시티 코리아 위치 찾기",
+    "5,1": "현재 나의 위치 찾기",
+    "7,1": "주소로 검색하기"
+  },
+  "AttachInfos": {
+    "1,0": {
+      "CssName": "theArea"
+    },
+    "3,1": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.RunJavaScriptCommand, ServerDesignerCommon",
+            "JavaScript": "var mapContainerId = $('.theArea').attr('id'); // 지도 표시하는 container의 id값 찾아와 지정하기\r\n\r\nvar latitude = 37.3922680, longitude = 126.956505; // GCK 위치 입력\r\n\r\nvar mapContainer = document.getElementById(mapContainerId), // 지도를 표시할 div \r\n    mapOption = {\r\n        center: new kakao.maps.LatLng(latitude, longitude), \r\n        level: 3 // 지도의 확대 레벨\r\n    };  \r\n\r\nvar map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다    \r\n\r\nvar markerPosition  = new kakao.maps.LatLng(latitude, longitude); // 마커가 표시될 위치입니다 \r\n\r\nvar marker = new kakao.maps.Marker({\r\n\tposition: markerPosition\r\n}); // 마커를 생성합니다\r\n\r\nmarker.setMap(map); // 마커가 지도 위에 표시되도록 설정합니다\r\n\r\nvar iwContent = '<div style=\"padding:5px;\">경기도 안양시 동안구 시민대로 230 B707-1 &nbsp;</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다\r\n    iwPosition = new kakao.maps.LatLng(latitude+0.00035, longitude), //인포윈도우 표시 위치입니다\r\n    iwRemoveable = false; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다\r\n\r\n// 인포윈도우를 생성하고 지도에 표시합니다\r\nvar infowindow = new kakao.maps.InfoWindow({\r\n    map: map, // 인포윈도우가 표시될 지도\r\n    position : iwPosition, \r\n    content : iwContent,\r\n    removable : iwRemoveable\r\n});\r\n",
+            "ID": "bc174abe207f4937b2fad3107eb6b24c"
+          }
+        ],
+        "Text": "그레이프시티 코리아 위치 찾기",
+        "TemplateKey": "_RS_RoundCorner_Style7"
+      }
+    },
+    "5,1": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.RunJavaScriptCommand, ServerDesignerCommon",
+            "JavaScript": "navigator.geolocation.getCurrentPosition(function(position) {\r\n    var mapContainerId = $('.theArea').attr('id'); // 지도 표시하는 container의 id값 찾아와 지정하기\r\n    var container = document.getElementById(mapContainerId); // 지도 표시 영역 확인\r\n\t\r\n    var latitude = position.coords.latitude;\r\n    var longitude = position.coords.longitude;\r\n\r\n    var options = {\r\n        center: new kakao.maps.LatLng(latitude, longitude),\r\n        level: 3\r\n    };\r\n\r\n    var map = new kakao.maps.Map(container, options); // 지도를 생성합니다.\r\n\r\n    var markerPosition  = new kakao.maps.LatLng(latitude, longitude); // 마커가 표시될 위치입니다 \r\n\r\n    var marker = new kakao.maps.Marker({\r\n        position: markerPosition\r\n    }); // 마커를 생성합니다\r\n\r\n    marker.setMap(map); // 마커가 지도 위에 표시되도록 설정합니다\r\n});\r\n\r\n",
+            "ID": "c8b1c911f0b54451ad75c6abf0d1d702"
+          }
+        ],
+        "Text": "현재 나의 위치 찾기",
+        "TemplateKey": "_RS_RoundCorner_Style2"
+      }
+    },
+    "7,1": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.RunJavaScriptCommand, ServerDesignerCommon",
+            "JavaScript": "var width=600;\r\nvar height=600;\r\nvar theAddress=\"\";\r\n\r\n//아래부터는 KAKAO 주소 검색 API 페이지에서 제공하는 함수\r\ndaum.postcode.load(function(){\r\n  new daum.Postcode({\r\n\toncomplete: function(data) {\r\n\r\n\t//alert(data.address);\r\n\ttheAddress=data.address; // 주소 검색 후 주소 값을 변수에 저장\r\n\tsetMapToSearchedAddress(); // 저장한 주소를 가지고 지도 API로 이동\r\n\t}\r\n  }).open({\r\n\t  left: (window.screen.width/2)-(width/2),\r\n\t  top: (window.screen.height/2)-(height/2)\r\n  });\r\n}); \r\n\r\nconsole.log(theAddress); // 콘솔에 검색한 주소를 표시\r\n\r\n// 주소 검색 종료 후 검색한 주소를 이용하여 지도에 위치 표시\r\nfunction setMapToSearchedAddress() {\r\n\tvar mapContainerId = $('.theArea').attr('id'); // 지도 표시하는 container의 id값 찾아와 지정하기\r\n\r\n\tvar mapContainer = document.getElementById(mapContainerId), // 지도를 표시할 div \r\n\t\tmapOption = {\r\n\t\t\tcenter: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표\r\n\t\t\tlevel: 3 // 지도의 확대 레벨\r\n\t\t};  \r\n\r\n\t// 지도를 생성합니다    \r\n\tvar map = new kakao.maps.Map(mapContainer, mapOption); \r\n\r\n\tvar customAddress = theAddress; // 사용자에게 주소 입력 받아 처리\r\n\r\n\t// 주소-좌표 변환 객체를 생성합니다\r\n\tvar geocoder = new kakao.maps.services.Geocoder();\r\n\r\n\t// 주소로 좌표를 검색합니다\r\n\tgeocoder.addressSearch(customAddress, function(result, status) {\r\n\r\n\t\t// 정상적으로 검색이 완료됐으면 \r\n\t\t if (status === kakao.maps.services.Status.OK) {\r\n\r\n\t\t\tvar coords = new kakao.maps.LatLng(result[0].y, result[0].x);\r\n\r\n\t\t\t// 결과값으로 받은 위치를 마커로 표시합니다\r\n\t\t\tvar marker = new kakao.maps.Marker({\r\n\t\t\t\tmap: map,\r\n\t\t\t\tposition: coords\r\n\t\t\t});\r\n\r\n\t\t\t// 인포윈도우로 장소에 대한 설명을 표시합니다\r\n\t\t\tvar infowindow = new kakao.maps.InfoWindow({\r\n\t\t\t\tcontent: '<div style=\"width:150px;text-align:center;padding:6px 0;\">'+customAddress+'</div>'\r\n\t\t\t});\r\n\t\t\tinfowindow.open(map, marker);\r\n\r\n\t\t\t// 지도의 중심을 결과값으로 받은 위치로 이동시킵니다\r\n\t\t\tmap.setCenter(coords);\r\n\t\t} \r\n\t});    \r\n}",
+            "ID": "b1185f38b78f404f9f6d2d5f6f2e664b"
+          }
+        ],
+        "Text": "주소로 검색하기",
+        "TemplateKey": "_RS_RoundCorner_Style4"
+      }
+    },
+    "9,1": {
+      "CssName": "map-link"
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "FontFamily": 0,
+        "Formatter": 1
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Body",
+        "[AUTO]General"
+      ]
+    },
+    "CellStyles": {
+      "7,4": 0
+    },
+    "SheetStyle": {
+      "FontFamily": 0
+    }
+  },
+  "Spans": [
+    "1,0,1,3"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "PageLoadedCommandList": [
+      {
+        "$type": "Forguncy.Model.RunJavaScriptCommand, ServerDesignerCommon",
+        "JavaScript": "navigator.geolocation.getCurrentPosition(function(position) {\r\n    var mapContainerId = $('.theArea').attr('id'); // 지도 표시하는 container의 id값 찾아와 지정하기\r\n    var container = document.getElementById(mapContainerId); // 지도 표시 영역 확인\r\n\t\r\n    var latitude = position.coords.latitude;\r\n    var longitude = position.coords.longitude;\r\n\r\n    var options = {\r\n        center: new kakao.maps.LatLng(latitude, longitude),\r\n        level: 4\r\n    };\r\n\r\n    var map = new kakao.maps.Map(container, options); // 지도를 생성합니다.\r\n\r\n    var markerPosition  = new kakao.maps.LatLng(latitude, longitude); // 마커가 표시될 위치입니다 \r\n\r\n    var marker = new kakao.maps.Marker({\r\n        position: markerPosition\r\n    }); // 마커를 생성합니다\r\n\r\n    marker.setMap(map); // 마커가 지도 위에 표시되도록 설정합니다\r\n});\r\n\r\n",
+        "ID": "23a9a40fc8864fecbf67042f0e1f7f38"
+      }
+    ],
+    "RowBreakLines": [],
+    "RepeatRangeSettings": []
+  },
+  "PrintInfo": {
+    "Margin": {},
+    "PaperSize": {}
+  }
+}//f5jKrHCdjDTX516JfeQiFa3M43/rMqmwyAkfUu/Td++pALbrUBswgWiVynU6o6VjXnJot5apkj39G3CDihYhOWTz+zrh6NYbGh9WOQKPpq+WpooYNfbYDgfrsZtpEqBEs4N6A7AyaXCFs0bxMzOBYvRDnj3UzeB60arpumRMoqjVUeZ7XbuRbTtwz+4d5KXCBTt3SEt+9DOnSaqyiGK/xtp7jss0FRGEQQYFPSk4RmPJCbwPryI+sb/4o90ca+vY+uxDfhZ4q8fX0yYq7TWiXh3le9dPyKw7ltQDcxkM7Eeh1WiVOhuC6Exyf82hJtOHngKl38mExZekuNyh2wyb5cA95bjktNIkhoKkRPybXAaIHXVWzCvV4vr3ChBEGgJagvRxJm4Hxr5AbLYvNVKlly2py361XgO9Aa5TxZkAR23ZqDlo1RNSA7qHzs4d5g2ernpguoOhhSnt5auM9UHxhWAKM/2vUq6ZxiuUYvNqkUjgV+MzFvfdiBVOMf6icEtIGDK6iXS4sTizJwYn7UMs7l953neBGVo62ZaSrcuPtJopxN3ih+UtnFNEW2kVfyFzwAS+80IIXZMrwtnvXl0nkJKHS0uhsXnRUFr+afS5BBCx+hDRmP4BrAZUQCantEw0V+j1FswqelUZqIeGeRljLdqIuluFNMCj3a84P/uzAb4FR9Zff8iP3uQlIq29Gs9shoAdEnywkpfMNDSPfMXgfdXzs9eexK0ThPwo4p56ShMLP2rBslUwPcH+tFCqdyV17URilIDAAV2337j+JAIprXmN5aM+QLpSnNBYQX7fp3sFVQWvZlxi1i0nHmFEdy8yA4aXfMujyIaNorN8zO++IZe7sIb/vvk5BJKIt8XJZnlsxLhX3wPVerxLcwIUydCINctSQbESp7Wm9enmrcLZNw==|920
