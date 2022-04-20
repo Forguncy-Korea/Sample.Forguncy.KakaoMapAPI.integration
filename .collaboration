@@ -101,16 +101,7 @@
   },
   {
     "ModuleName": "PCPage/카카오맵API연동방법",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "Forguncy-Korea",
-      "Email": "jake.park@grapecity.com"
-    },
-    "LockDateTime": "2022-04-20T10:47:47.5773699+09:00",
-    "ModuleType": 1,
-    "ToRemoveFiles": [
-      "Pages\\카카오맵API연동방법.json"
-    ]
+    "ModuleType": 1
   },
   {
     "ModuleName": "MasterPCPage/FGC_유저마스터페이지",

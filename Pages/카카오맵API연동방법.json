@@ -76,6 +76,11 @@
           "DesignLengthInPixel": 75.0
         }
       },
+      "22": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 433.0
+        }
+      },
       "23": {
         "GridRowColumnDefinition": {
           "DesignLengthInPixel": 75.0
@@ -206,7 +211,17 @@
           "DesignLengthInPixel": 75.0
         }
       },
-      "52": {
+      "54": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 25.0
+        }
+      },
+      "55": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 75.0
+        }
+      },
+      "56": {
         "GridRowColumnDefinition": {
           "DesignLengthInPixel": 25.0
         }
@@ -215,19 +230,9 @@
         "GridRowColumnDefinition": {
           "DesignLengthInPixel": 75.0
         }
-      },
-      "54": {
-        "GridRowColumnDefinition": {
-          "DesignLengthInPixel": 25.0
-        }
-      },
-      "22": {
-        "GridRowColumnDefinition": {
-          "DesignLengthInPixel": 433.0
-        }
       }
     },
-    "Count": 55,
+    "Count": 57,
     "DefaultSize": 25.0
   },
   "Cols": {
@@ -261,7 +266,8 @@
     "47,2": "https://dapi.kakao.com/v2/maps/sdk.js?appkey=복사한자신의앱키&libraries=services,clusterer,drawing",
     "49,1": "13. 이제 \"시작페이지\"에 있는 예제들을 분석하셔서 카카오맵을 포건시에 연동하는 기술을 연습해 보세요.",
     "50,2": "거의 모든 예제는 카카오맵 사이트에 올라와 있습니다.",
-    "52,1": "14. 관련하여 문의 사항이 있으시면 언제든 포건시 Q&A 게시판에 문의 남겨주십시오. 고맙습니다."
+    "52,1": "14. 카카오 API 사용 시 카카오는 모든 API를 도메인이 있는 실제 서버에서 사용하도록 제한하였기 때문에 포건시 서버에 올리셔야 사용 가능합니다.",
+    "54,1": "15. 관련하여 문의 사항이 있으시면 언제든 포건시 Q&A 게시판에 문의 남겨주십시오. 고맙습니다."
   },
   "AttachInfos": {
     "6,2": {
@@ -1539,6 +1545,66 @@
       "51,57": 3,
       "51,58": 3,
       "51,59": 3,
+      "52,0": 3,
+      "52,1": 3,
+      "52,2": 3,
+      "52,3": 3,
+      "52,4": 3,
+      "52,5": 3,
+      "52,6": 3,
+      "52,7": 3,
+      "52,8": 3,
+      "52,9": 3,
+      "52,10": 3,
+      "52,11": 3,
+      "52,12": 3,
+      "52,13": 3,
+      "52,14": 3,
+      "52,15": 3,
+      "52,16": 3,
+      "52,17": 3,
+      "52,18": 3,
+      "52,19": 3,
+      "52,20": 3,
+      "52,21": 3,
+      "52,22": 3,
+      "52,23": 3,
+      "52,24": 3,
+      "52,25": 3,
+      "52,26": 3,
+      "52,27": 3,
+      "52,28": 3,
+      "52,29": 3,
+      "52,30": 3,
+      "52,31": 3,
+      "52,32": 3,
+      "52,33": 3,
+      "52,34": 3,
+      "52,35": 3,
+      "52,36": 3,
+      "52,37": 3,
+      "52,38": 3,
+      "52,39": 3,
+      "52,40": 3,
+      "52,41": 3,
+      "52,42": 3,
+      "52,43": 3,
+      "52,44": 3,
+      "52,45": 3,
+      "52,46": 3,
+      "52,47": 3,
+      "52,48": 3,
+      "52,49": 3,
+      "52,50": 3,
+      "52,51": 3,
+      "52,52": 3,
+      "52,53": 3,
+      "52,54": 3,
+      "52,55": 3,
+      "52,56": 3,
+      "52,57": 3,
+      "52,58": 3,
+      "52,59": 3,
       "53,0": 3,
       "53,1": 3,
       "53,2": 3,
@@ -1598,7 +1664,67 @@
       "53,56": 3,
       "53,57": 3,
       "53,58": 3,
-      "53,59": 3
+      "53,59": 3,
+      "55,0": 3,
+      "55,1": 3,
+      "55,2": 3,
+      "55,3": 3,
+      "55,4": 3,
+      "55,5": 3,
+      "55,6": 3,
+      "55,7": 3,
+      "55,8": 3,
+      "55,9": 3,
+      "55,10": 3,
+      "55,11": 3,
+      "55,12": 3,
+      "55,13": 3,
+      "55,14": 3,
+      "55,15": 3,
+      "55,16": 3,
+      "55,17": 3,
+      "55,18": 3,
+      "55,19": 3,
+      "55,20": 3,
+      "55,21": 3,
+      "55,22": 3,
+      "55,23": 3,
+      "55,24": 3,
+      "55,25": 3,
+      "55,26": 3,
+      "55,27": 3,
+      "55,28": 3,
+      "55,29": 3,
+      "55,30": 3,
+      "55,31": 3,
+      "55,32": 3,
+      "55,33": 3,
+      "55,34": 3,
+      "55,35": 3,
+      "55,36": 3,
+      "55,37": 3,
+      "55,38": 3,
+      "55,39": 3,
+      "55,40": 3,
+      "55,41": 3,
+      "55,42": 3,
+      "55,43": 3,
+      "55,44": 3,
+      "55,45": 3,
+      "55,46": 3,
+      "55,47": 3,
+      "55,48": 3,
+      "55,49": 3,
+      "55,50": 3,
+      "55,51": 3,
+      "55,52": 3,
+      "55,53": 3,
+      "55,54": 3,
+      "55,55": 3,
+      "55,56": 3,
+      "55,57": 3,
+      "55,58": 3,
+      "55,59": 3
     },
     "RowStyles": {
       "1": 12,
@@ -1654,7 +1780,9 @@
       "51": 13,
       "52": 13,
       "53": 13,
-      "54": 13
+      "54": 13,
+      "55": 13,
+      "56": 13
     },
     "SheetStyle": {
       "FontFamily": 0
@@ -1687,4 +1815,4 @@
     "Margin": {},
     "PaperSize": {}
   }
-}//ndD8NV6fjAoLMhxlbxdaZXgsA4meYiLwLjVy4RutUIXO53eOMT+8mvuldwREBGWWPA/TzGPKkYzVH6X8c+cHsIFkabZJ1/D/mLaRQ70s4/4xMEmr2hhsnRITqkbgvIADDQcvMChJkU5YNuLgwhkzCjSDYFmMapKWsrWmls38otB/h4WmcEpugrAZNygXSb5hZ0gPC2o9Wrr713bNCCrJqvQBHTLrTPJmrpPaJEFyKkDGfMmUkXEx9u5VLUJx1XyfQ55Xvr2GQCVGGUawZjlBhy9pQLCR655c2yx5v/3yzGKqJ8Pi/JIuQivk9xFY2R+TY2SHV05pudN5nyxbcJq8N4dfbqf/i2u8hDBtVz/bf/usAXWAVJsle53s3RRqnogyixqT4/3K1tZB/ccBum+JATKvPXAefA//Rdsrf2rfEZkWL9l/rkL5Zlu5hth+CzPsX3opRbmAn3ktULpld5yz0VTTHzRvL1hw2alTS6NZu3Fg+igvRxsrj+D/oEt567QRAOZoioKFd6kKaUyYevGNfc75/n1yj6I1q9TBZOswQMhVulsMLPXweyXrnw8Edn/WCFWXNcmmTmbLqVNHrE5FTRGveqV+VLuck97B4zNaeEkCtZ8NAO9CTbT3cLoSjQU9tSqRT66vUeSrwWNQ5ara56vlAzJydqG6VXsXLbcLrc3af7kdij2cgWPUCNrgpd6a4qugAGewr737Ewwc3MSIi8a9zI+r3WJdhzUZKS7m/LkjGjt1jbhxkqaL61t4J4leJevxwSk5TPMW+zHCbIHcRiIwH1yoTTQD4zbcWWxMwLDeT0ARb+dy3zO/oETI28wNibZW5Lw2byeGKbzu/gP/Y0zdD1sIT2UwR3W9DV6E5i0zAUpVMxjMm+oqkBikuKAAmZSpRNSMJtBbXhgs7Is1wA==|920
+}//LaLNmRKiBxeVlW8wxYWUJn80Jxo9PDcR2vX3sEl74cyPii/ggeN++p7nLWtbqE0vNHHrp8qet7SGMaGROsVQaoS2xeXFRThxU3+r5qTPiH1u31KsRF9vMEdaV93RVKctZYboq5nlBwU+zxYrrV570lteNBovxXrwtW2mbORCEjkHfKs2BZV1lt2HvvEcIrMGZRyvYJqY8agLNVdV48E6TNiK9BLagt6MIUx/7jskbgCpQhsZ5LeM66jDYa1hpSu+PjdMAnxZdpzKunkF7PBfx0wpdVN+W3j1MSMcSQ0C87uQebnTX5MooG4uMF8CxmY31QktCgyjq4YVTZkgcqdlGiiGOmdifWhAmdciEWz0+6SULgPGAqOuIE6mKemDUraVO2jAhbtJE/0I7UiqTVPN9vEQucXTOKsUE3oKOyvaojYng4y3zfySrXSJy15crGbmPSXM9R65Md/svY2D7Gym2Faqc1SqexCccN2SdvOUA04YdEjlXNwd9JPPIoHSxdEp5QPU3F5CrwiA6d4RrlKZhW7KesbpuJ+pMS+rULehxLh5jAUya2kvVesPqbUosz3DoUZM1rQpdsxK8Y7cSC76EHcTnEr1cG3ehA2L2klUqadEEhpRmmZQo5VCsQDBsslICQPVYVWn8SFSPceQT02nRphevl10+raN+wlKJBSgMUMi4a/QtqHGvFIVsREJQvRKJZfILWeSDl2CC4Z1unTjqhxkh6OQ6RplARXMuTaKqF0cKJRqL600gQlD4cSCxEYdnNp+C8LG4B/H44SfpC4UZvVJJ1oVEcgN8NNtRDuou14o+rR+0m7Uy3m/pWaeY5G0FcwPg1ZHsHDTNZww1+zN0lD3QgpB8ZGT/ZtYI/yNlIi3MkhusjIPmGV80M3/ii1JfTr88Fr273LI8KLviabRlA==|920
